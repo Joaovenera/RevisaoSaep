@@ -42,7 +42,16 @@
             
             })
             
-                .then(response => {console.log(response)})
+                .then(response => {
+                console.log(response);
+                if(response.status==200){
+                    window.location.href = "google.com"
+                } else {
+                    
+                    alert("Usuario ou senha incorretos!")
+                }
+
+                })
             
             
                 .catch(error => console.log(error));
